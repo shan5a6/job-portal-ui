@@ -141,9 +141,14 @@ const Footer = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm text-gray-400 mb-6 md:mb-0">
-              <a className="group relative hover:text-white transition-colors duration-300">
+              <a className="group relative hover:text-white transition-colors duration-300 cursor-pointer">
                 <span className="relative z-10">Privacy Policy</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-72 bg-gray-900 border border-gray-700 rounded-xl p-4 shadow-2xl opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300 z-50">
+                  <h5 className="text-white font-semibold mb-2 text-sm">Privacy Policy</h5>
+                  <p className="text-gray-300 text-xs leading-relaxed">We collect and process your personal data to connect you with employers. Your data is never sold to third parties. You can request deletion at any time.</p>
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-700"></div>
+                </div>
               </a>
               <a className="group relative hover:text-white transition-colors duration-300">
                 <span className="relative z-10">Terms of Service</span>
