@@ -149,10 +149,45 @@ const Footer = () => {
                 <span className="relative z-10">Terms of Service</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
               </a>
-              <a className="group relative hover:text-white transition-colors duration-300">
+              <div className="group relative cursor-pointer hover:text-white transition-colors duration-300">
                 <span className="relative z-10">Cookie Policy</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </a>
+
+                {/* Hover popup */}
+                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-80 bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl p-5 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-50 text-left">
+                  {/* Arrow */}
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-gray-700"></div>
+
+                  <h3 className="text-white font-bold text-base mb-3 flex items-center gap-2">
+                    <span className="w-6 h-6 rounded-full bg-gradient-to-br from-primary-500 to-purple-500 flex items-center justify-center text-xs">🍪</span>
+                    Cookie Policy
+                  </h3>
+
+                  <p className="text-gray-400 text-xs leading-relaxed mb-4">
+                    We use cookies to keep you signed in, remember your preferences, and understand how you use JobPortal.
+                  </p>
+
+                  <div className="space-y-2">
+                    {[
+                      { name: "Essential", desc: "Login & session management", color: "bg-green-500" },
+                      { name: "Preference", desc: "Theme & search settings", color: "bg-blue-500" },
+                      { name: "Analytics", desc: "Anonymous usage insights", color: "bg-purple-500" },
+                    ].map((cookie) => (
+                      <div key={cookie.name} className="flex items-start gap-2">
+                        <span className={`mt-1 w-2 h-2 rounded-full shrink-0 ${cookie.color}`}></span>
+                        <div>
+                          <span className="text-white text-xs font-semibold">{cookie.name} — </span>
+                          <span className="text-gray-400 text-xs">{cookie.desc}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="text-gray-500 text-xs mt-4 border-t border-gray-700 pt-3">
+                    You can manage cookies anytime via your browser settings.
+                  </p>
+                </div>
+              </div>
               <Link
                 to="/contact"
                 className="group relative hover:text-white transition-colors duration-300"
