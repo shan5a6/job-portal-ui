@@ -153,6 +153,11 @@ const Footer = () => {
               <a className="group relative hover:text-white transition-colors duration-300">
                 <span className="relative z-10">Terms of Service</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-64 bg-gray-900 border border-gray-700 text-gray-200 text-xs rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50 shadow-xl">
+                  <p className="font-semibold text-white mb-1">Terms of Service</p>
+                  <p>By using JobPortal, you agree to our terms governing job postings, applications, and platform usage. Last updated Jan 2026.</p>
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-700"></div>
+                </div>
               </a>
               <div className="group relative cursor-pointer hover:text-white transition-colors duration-300">
                 <span className="relative z-10">Cookie Policy</span>
